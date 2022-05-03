@@ -1,7 +1,7 @@
 import React from "react";
 import Link from "next/link";
 
-const Nav = ({ categories }: any) => {
+const Nav = ({ categories, seo }: any) => {
   return (
     <div>
       <nav className="uk-navbar-container" data-uk-navbar>

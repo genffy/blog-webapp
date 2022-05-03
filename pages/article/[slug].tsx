@@ -1,22 +1,21 @@
 import Moment from "react-moment";
-import ReactMarkdown from "react-markdown";
+import NextImage from "next/image";
 
 import Seo from "../../components/seo";
 import Layout from "../../components/layout";
-
+import Blocks from "../../components/blocks";
 import { fetchAPI } from "../../lib/api";
 import { getStrapiMedia } from "../../lib/media";
 
 const Article = ({ article, categories }: any) => {
-  const imageUrl = getStrapiMedia(article.attributes.image);
+  const imageUrl = getStrapiMedia(article.attributes.cover);
 
   const seo = {
     metaTitle: article.attributes.title,
     metaDescription: article.attributes.description,
-    shareImage: article.attributes.image,
+    shareImage: article.attributes.cover,
     article: true,
   };
-
   return (
     <Layout categories={categories.data}>
       <Seo seo={seo} />
@@ -31,12 +30,12 @@ const Article = ({ article, categories }: any) => {
       </div>
       <div className="uk-section">
         <div className="uk-container uk-container-small">
-          <ReactMarkdown children={article.attributes.content} />
+          <Blocks blocks={article.attributes.blocks}></Blocks>
           <hr className="uk-divider-small" />
           <div className="uk-grid-small uk-flex-left" data-uk-grid="true">
             <div>
               {article.attributes.author.data.attributes.picture && (
-                <img
+                <NextImage
                   src={getStrapiMedia(
                     article.attributes.author.data.attributes.picture
                   )}
@@ -58,7 +57,7 @@ const Article = ({ article, categories }: any) => {
               </p>
               <p className="uk-text-meta uk-margin-remove-top">
                 <Moment format="MMM Do YYYY">
-                  {article.attributes.published_at}
+                  {article.attributes.publishedAt}
                 </Moment>
               </p>
             </div>
@@ -87,7 +86,7 @@ export async function getStaticProps({ params }: any) {
     filters: {
       slug: params.slug,
     },
-    populate: ["image", "category", "author.picture"],
+    populate: ["cover", "blocks", "category", "author"],
   });
   const categoriesRes = await fetchAPI("/categories");
 
