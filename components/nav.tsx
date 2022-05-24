@@ -1,7 +1,9 @@
-import React from "react";
+import React, {useContext} from "react";
+import { GlobalContext } from "../pages/_app";
 import Link from "next/link";
 
 const Nav = ({ categories, seo }: any) => {
+  const { siteName }: any = useContext(GlobalContext);
   return (
     <div>
       <nav className="uk-navbar-container" data-uk-navbar>
@@ -9,7 +11,7 @@ const Nav = ({ categories, seo }: any) => {
           <ul className="uk-navbar-nav">
             <li>
               <Link href="/">
-                <a>Strapi Blog</a>
+                <a>{ siteName }</a>
               </Link>
             </li>
           </ul>
