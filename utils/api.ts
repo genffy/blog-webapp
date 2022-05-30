@@ -7,7 +7,7 @@ import qs from "qs";
  */
 export function getStrapiURL(path = "") {
   return `${
-    process.env.NEXT_PUBLIC_STRAPI_API_URL || "http://localhost:1337"
+    process.env.NEXT_PUBLIC_STRAPI_API_URL
   }${path}`;
 }
 
@@ -34,7 +34,6 @@ export async function fetchAPI(path: string, urlParamsObject = {}, options = {})
   )}`;
   // Trigger API call
   const response = await fetch(requestUrl, mergedOptions);
-
   // Handle response
   if (!response.ok) {
     console.error(response.statusText, requestUrl);

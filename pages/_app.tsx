@@ -5,8 +5,8 @@ import Head from "next/head";
 import '../styles/globals.css';
 
 import { createContext } from "react";
-import { fetchAPI } from "../lib/api";
-import { getStrapiMedia } from "../lib/media";
+import { fetchAPI } from "@/utils/api";
+import { getStrapiMedia } from "@/utils/media";
 
 import type { AppContext, AppProps } from 'next/app'
 
@@ -45,6 +45,7 @@ MyApp.getInitialProps = async (ctx: AppContext) => {
       defaultSeo: {
         populate: "*",
       },
+      avatar: '*',
     },
   });
   // Pass the data to our page via props

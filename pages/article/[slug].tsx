@@ -1,11 +1,11 @@
 import Moment from "react-moment";
 import NextImage from "next/image";
 
-import Seo from "../../components/seo";
-import Layout from "../../components/layout";
-import Blocks from "../../components/blocks";
-import { fetchAPI } from "../../lib/api";
-import { getStrapiMedia } from "../../lib/media";
+import Seo from "@/components/seo";
+import Layout from "@/components/layout";
+import Blocks from "@/components/blocks";
+import { fetchAPI } from "@/utils/api";
+import { getStrapiMedia } from "@/utils/media";
 
 const Article = ({ article, categories }: any) => {
   const imageUrl = getStrapiMedia(article.attributes.cover);
