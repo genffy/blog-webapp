@@ -1,7 +1,7 @@
 module.exports = {
   apps: [
     {
-      name: 'app',
+      name: 'blog-webapp',
       script: 'npm',
       args: 'start',
     },
