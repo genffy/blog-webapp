@@ -1,7 +1,7 @@
 import React, { useContext, useEffect, useState } from "react";
-import Image from 'next/image'
 import Seo from "@/components/seo";
 import Menu from "@/components/menu";
+import NFTAvatar from '@/components/NFTAvatar'
 import { fetchAPI } from "@/utils/api";
 import utilStyles from '@/styles/utils.module.css'
 import { GlobalContext } from "@/pages/_app";
@@ -24,14 +24,7 @@ const Home = ({ homepage,  }: any) => {
       <div className="uk-container">
         <div className={utilStyles.flexCenter} style={{paddingTop: '10%'}}>
           <div style={{display: 'flow-root', textAlign: "center"}}>
-            <Image
-              priority
-              src={getStrapiMedia(avatar)}
-              className={utilStyles.borderCircle}
-              height={144}
-              width={144}
-              alt={siteName}
-            />
+            <NFTAvatar image={getStrapiMedia(avatar)}></NFTAvatar>
             <h1 className={utilStyles.heading2Xl}>{siteName}</h1>
             <Menu />
             {

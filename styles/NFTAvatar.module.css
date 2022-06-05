@@ -1,0 +1,218 @@
+/* :root, :host {
+  --mask-primary: #1c68f3;
+  --mask-primary-fragment: 28,104,243;
+  --mask-primary-contrast-text: #ffffff;
+  --mask-primary-contrast-text-fragment: 255,255,255;
+  --mask-background: #15171A;
+  --mask-background-fragment: 21,23,26;
+  --mask-secondary: #242e57;
+  --mask-secondary-fragment: 36,46,87;
+  --mask-secondary-contrast-text: #ffffff;
+  --mask-secondary-contrast-text-fragment: 255,255,255;
+  --mask-input: #282B49;
+  --mask-input-fragment: 40,43,73;
+  --mask-primary-background: #212442;
+  --mask-primary-background-fragment: 33,36,66;
+  --mask-primary-background-2: #212442;
+  --mask-primary-background-2-fragment: 33,36,66;
+  --mask-secondary-background: #252846;
+  --mask-secondary-background-fragment: 37,40,70;
+  --mask-light-background: #2E314F;
+  --mask-light-background-fragment: 46,49,79;
+  --mask-main-background: #111432;
+  --mask-main-background-fragment: 17,20,50;
+  --mask-suspension-background: rgba(27, 30, 60, 0.8);
+  --mask-suspension-background-fragment: 27,30,60;
+  --mask-normal-background: #262947;
+  --mask-normal-background-fragment: 38,41,71;
+  --mask-twitter-input-background: #17191D;
+  --mask-twitter-input-background-fragment: 23,25,29;
+  --mask-twitter-background: #17191D;
+  --mask-twitter-background-fragment: 23,25,29;
+  --mask-twitter-background-hover: #17191D;
+  --mask-twitter-background-hover-fragment: 23,25,29;
+  --mask-twitter-button: #EFF3F4;
+  --mask-twitter-button-fragment: 239,243,244;
+  --mask-twitter-button-text: #0F1419;
+  --mask-twitter-button-text-fragment: 15,20,25;
+  --mask-twitter-blue: #4989FF;
+  --mask-twitter-blue-fragment: 73,137,255;
+  --mask-twitter-border-line: #2F3336;
+  --mask-twitter-border-line-fragment: 47,51,54;
+  --mask-twitter-input: #1D2023;
+  --mask-twitter-input-fragment: 29,32,35;
+  --mask-twitter-second: #636B72;
+  --mask-twitter-second-fragment: 99,107,114;
+  --mask-twitter-main: #D9D9D9;
+  --mask-twitter-main-fragment: 217,217,217;
+  --mask-twitter-bottom: #000000;
+  --mask-twitter-bottom-fragment: 0,0,0;
+  --mask-twitter-info-background: #AFC3E1;
+  --mask-twitter-info-background-fragment: 175,195,225;
+  --mask-twitter-info: #8CA3C7;
+  --mask-twitter-info-fragment: 140,163,199;
+  --mask-twitter-line: #2F3336;
+  --mask-twitter-line-fragment: 47,51,54;
+  --mask-twitter-bg: #15171A;
+  --mask-twitter-bg-fragment: 21,23,26;
+  --mask-twitter-tooltip-bg: rgba(91,112,131,0.6);
+  --mask-twitter-tooltip-bg-fragment: 91,112,131;
+  --mask-red-main: #ff5f5f;
+  --mask-red-main-fragment: 255,95,95;
+  --mask-red-light: #46304a;
+  --mask-red-light-fragment: 70,48,74;
+  --mask-red-contrast-text: #ffffff;
+  --mask-red-contrast-text-fragment: 255,255,255;
+  --mask-green-main: #77e0b5;
+  --mask-green-main-fragment: 119,224,181;
+  --mask-green-light: #314457;
+  --mask-green-light-fragment: 49,68,87;
+  --mask-orange-main: #ffb915;
+  --mask-orange-main-fragment: 255,185,21;
+  --mask-orange-light: #463e3f;
+  --mask-orange-light-fragment: 70,62,63;
+  --mask-icon-light: #a6a9b6;
+  --mask-icon-light-fragment: 166,169,182;
+  --mask-divider: #3e455e;
+  --mask-divider-fragment: 62,69,94;
+  --mask-border: #3E455E;
+  --mask-border-fragment: 62,69,94;
+  --mask-border-secondary: #6e767d;
+  --mask-border-secondary-fragment: 110,118,125;
+  --mask-text-primary: #ffffff;
+  --mask-text-primary-fragment: 255,255,255;
+  --mask-text-secondary: ghostwhite;
+  --mask-text-secondary-fragment: 248,248,255;
+  --mask-secondary-info-text: #AFC3E1;
+  --mask-secondary-info-text-fragment: 175,195,225;
+  --mask-normal-text: rgba(255, 255, 255, 0.8);
+  --mask-normal-text-fragment: 255,255,255;
+  --mask-info-background: rgba(175, 195, 225, 0.15);
+  --mask-info-background-fragment: 175,195,225;
+  --mask-success: #60DFAB;
+  --mask-success-fragment: 96,223,171;
+  --mask-warning: #FFB915;
+  --mask-warning-fragment: 255,185,21;
+  --mask-blue: #1C68F3;
+  --mask-blue-fragment: 28,104,243;
+  --mask-text-link: #ffffff;
+  --mask-text-link-fragment: 255,255,255;
+  --mask-line-light: #32365B;
+  --mask-line-light-fragment: 50,54,91;
+  --mask-line-lighter: #32365B;
+  --mask-line-lighter-fragment: 50,54,91;
+  --mask-text-light: #A6A9B6;
+  --mask-text-light-fragment: 166,169,182;
+  --mask-lightest-background: #212422;
+  --mask-lightest-background-fragment: 33,36,34;
+  --mask-link-text: #ffffff;
+  --mask-link-text-fragment: 255,255,255;
+  --mask-twitter: #2CA4EF;
+  --mask-twitter-fragment: 44,164,239;
+  --mask-facebook: #4267B2;
+  --mask-facebook-fragment: 66,103,178;
+  --mask-white: #ffffff;
+  --mask-white-fragment: 255,255,255;
+  --mask-bottom: #000000;
+  --mask-bottom-fragment: 0,0,0;
+  --mask-main: #D4D4D4;
+  --mask-main-fragment: 212,212,212;
+  --mask-error-background: rgba(255, 95, 95, 0.1);
+  --mask-error-background-fragment: 255,95,95;
+  --mask-tooltip-background: #1A1D20;
+  --mask-tooltip-background-fragment: 26,29,32;
+  --mask-warning-background: rgba(255, 185, 21, 0.1);
+  --mask-warning-background-fragment: 255,185,21;
+  --mask-cyberconnect-primary: #ffffff;
+  --mask-cyberconnect-primary-fragment: 255,255,255;
+  --mask-error-plugin: #FF3545;
+  --mask-error-plugin-fragment: 255,53,69;
+  --mask-button-plugin-background: #07101B;
+  --mask-button-plugin-background-fragment: 7,16,27;
+  --mask-text-plugin-color: #07101B;
+  --mask-text-plugin-color-fragment: 7,16,27;
+  --mask-button-plugin-color: #FFFFFF;
+  --mask-button-plugin-color-fragment: 255,255,255;
+} */
+.avatar {
+  width: 156px;
+  height: 156px;
+  position: relative;
+  margin: 0 auto;
+}
+.tss-toma-root {
+  display: flex;
+  -webkit-box-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  align-items: center;
+  transform: scale(1.022);
+  position: absolute;
+  text-align: center;
+  color: white;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  inset: 0px;
+}
+.mui-toma {
+  margin: 0px;
+  color: rgb(29, 155, 240);
+  text-decoration: none;
+}
+.tss-fskt-avilg-root {
+  animation: 6s linear 0s infinite normal none running animation-zpl2as;
+  box-shadow: rgb(0 248 255 / 40%) 0px 5px 15px, rgb(37 41 46 / 20%) 0px 10px 30px;
+  transition: none 0s ease 0s;
+  border-radius: 100%;
+  display: flex;
+  -webkit-box-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  align-items: center;
+  line-height: 0;
+  border: 5px solid rgb(0, 248, 255);
+}
+.tss-fskt-pgcub-root {
+  overflow: unset!important;
+}
+@keyframes animation-zpl2as {
+  0%,
+  to {
+    border-color: #00f8ff;
+    box-shadow: 0 5px 15px rgba(0, 248, 255, 0.4),
+      0 10px 30px rgba(37, 41, 46, 0.2);
+  }
+  20% {
+    border-color: #a4ff00;
+    box-shadow: 0 5px 15px rgba(164, 255, 0, 0.4),
+      0 10px 30px rgba(37, 41, 46, 0.2);
+  }
+  40% {
+    border-color: #f7275e;
+    box-shadow: 0 5px 15px rgba(247, 39, 94, 0.4),
+      0 10px 30px rgba(37, 41, 46, 0.2);
+  }
+  60% {
+    border-color: #ffd300;
+    box-shadow: 0 5px 15px rgba(255, 211, 0, 0.4),
+      0 10px 30px rgba(37, 41, 46, 0.2);
+  }
+  80% {
+    border-color: #ff8a00;
+    box-shadow: 0 5px 15px rgba(255, 138, 0, 0.4),
+      0 10px 30px rgba(37, 41, 46, 0.2);
+  }
+}
+.rainbowBorder {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  /* animation: animation-zpl2as 6s linear infinite;
+  box-shadow: 0 5px 15px rgba(0, 248, 255, 0.4),
+    0 10px 30px rgba(37, 41, 46, 0.2);
+  transition: none;
+  border: 0 solid #00f8ff; */
+}
