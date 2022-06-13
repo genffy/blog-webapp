@@ -9,16 +9,16 @@ const Blocks = ({ blocks }: any) => {
       let cmp = null;
       switch(item.__component) {
         case 'shared.rich-text':
-          cmp = <RichText key={i} data={item}/>
+          cmp = <RichText key={item.id} data={item?.body}/>
           break;
         case 'shared.quote':
-          cmp = <Quote key={i} data={item}/>
+          cmp = <Quote key={item.id} data={item}/>
           break;
         case 'shared.media':
-          cmp = <Media key={i} data={item}/>
+          cmp = <Media key={item.id} data={item}/>
           break;
         case 'shared.slider':
-          cmp = <Slider key={i} data={item}/>
+          cmp = <Slider key={item.id} data={item}/>
           break;
       }
       return cmp;
