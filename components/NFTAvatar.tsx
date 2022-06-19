@@ -1,4 +1,3 @@
-import React from "react";
 import Image from 'next/image'
 import utilStyles from '@/styles/utils.module.css'
 import styles from '@/styles/NFTAvatar.module.css';

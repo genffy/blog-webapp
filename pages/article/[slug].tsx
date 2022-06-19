@@ -1,9 +1,8 @@
 import Moment from "react-moment";
 import NextImage from "next/image";
-
-import Seo from "@/components/seo";
 import Layout from "@/components/layout";
 import Blocks from "@/components/blocks";
+import RichText from "@/components/blocks/rich-text";
 import { fetchAPI } from "@/utils/api";
 import { getStrapiMedia } from "@/utils/media";
 
@@ -16,9 +15,9 @@ const Article = ({ article, categories }: any) => {
     shareImage: article.attributes.cover,
     article: true,
   };
+
   return (
-    <Layout categories={categories.data}>
-      <Seo seo={seo} />
+    <Layout categories={categories.data} seo={seo} >
       <div
         id="banner"
         className="uk-height-medium uk-flex uk-flex-center uk-flex-middle uk-background-cover uk-light uk-padding uk-margin"
@@ -26,10 +25,11 @@ const Article = ({ article, categories }: any) => {
         data-srcset={imageUrl}
         data-uk-img
       >
-        <h1>{article.attributes.title}</h1>
+        <h1 className="title-with-bg">{article.attributes.title}</h1>
       </div>
       <div className="uk-section">
         <div className="uk-container uk-container-small">
+          <RichText data={article.attributes.content}></RichText>
           <Blocks blocks={article.attributes.blocks}></Blocks>
           <hr className="uk-divider-small" />
           <div className="uk-grid-small uk-flex-left" data-uk-grid="true">
@@ -86,7 +86,17 @@ export async function getStaticProps({ params }: any) {
     filters: {
       slug: params.slug,
     },
-    populate: ["cover", "blocks", "category", "author"],
+    populate: {
+      author: '*',
+      category: "*",
+      blocks: {
+        populate: "*",
+      },
+      cover: {
+        populate: "*",
+      },
+    },
+    // populate: ["cover", "blocks", "category", "author"],
   });
   const categoriesRes = await fetchAPI("/categories");
 

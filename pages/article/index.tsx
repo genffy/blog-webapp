@@ -1,11 +1,14 @@
-import React from "react";
 import Articles from "@/components/articles";
 import Layout from "@/components/layout";
 import { fetchAPI } from "@/utils/api";
 
 const Home = ({ articles }: any) => {
+  const seo = {
+    metaTitle: '文章',
+    metaDescription: `文章列表`,
+  };
   return (
-    <Layout>
+    <Layout seo={seo}>
       <div className="uk-section">
         <div className="uk-container uk-container-large">
           <Articles articles={articles} />

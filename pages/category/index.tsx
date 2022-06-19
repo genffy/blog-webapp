@@ -1,11 +1,14 @@
-import React from "react";
 import Layout from "@/components/layout";
 import { fetchAPI } from "@/utils/api";
 import Link from "next/link";
 
 const Category = ({ categories }: any) => {
+  const seo = {
+    metaTitle: '标签',
+    metaDescription: `标签分类`,
+  };
   return (
-    <Layout>
+    <Layout seo={seo}>
       <div className="uk-section">
         <div className="uk-container uk-container-large">
           <div className="uk-grid-column-small uk-grid-row-large uk-child-width-1-3@s uk-text-center uk-grid-match" data-uk-grid>

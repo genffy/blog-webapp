@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 html,
 body {
   padding: 0;
@@ -24,7 +28,10 @@ h1 {
   font-family: Staatliches;
   font-size: 120px;
 }
-
+.title-with-bg {
+  background: rgba(0, 0, 0, .2);
+  padding: 10px;
+}
 #category {
   font-family: Staatliches;
   font-weight: 500;
@@ -39,7 +46,7 @@ h1 {
 
 #banner {
   margin: 20px;
-  height: 800px;
+  max-height: 400px;
 }
 
 #editor {

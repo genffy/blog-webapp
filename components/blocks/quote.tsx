@@ -1,6 +1,12 @@
-const Quote = ({ data }: any) => {
+import blocksStyles from '@/styles/blocks.module.css';
 
-    return null;
-  };
-  
-  export default Quote;
+const Quote = ({ data }: any) => {
+  console.log('Quote', data)
+  return <div>
+    <blockquote className={blocksStyles.blockquote}>
+      <p><em>{data.body}</em></p>
+    </blockquote>
+  </div>;
+};
+
+export default Quote;

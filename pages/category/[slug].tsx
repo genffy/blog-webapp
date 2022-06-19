@@ -1,4 +1,3 @@
-import Seo from "@/components/seo";
 import Layout from "@/components/layout";
 import Articles from "@/components/articles";
 
@@ -11,8 +10,7 @@ const Category = ({ category, categories }: any) => {
   };
 
   return (
-    <Layout categories={categories.data}>
-      <Seo seo={seo} />
+    <Layout categories={categories.data} seo={seo}>
       <div className="uk-section">
         <div className="uk-container uk-container-large">
           <h1>{category.attributes.name}</h1>
