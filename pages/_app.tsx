@@ -2,17 +2,23 @@
 import App from "next/app";
 import Head from "next/head";
 
-import '../styles/globals.css';
+import '@/styles/globals.css';
+import '@/styles/nord.css';
 
 import { createContext } from "react";
 import { fetchAPI } from "@/utils/api";
 import { getStrapiMedia } from "@/utils/media";
+import { GlobalStyles } from '@/styles/global'
+import { ThemeProvider } from '@emotion/react'
+import { themeLight, themeDark } from '@/styles/theme'
+import { useThemeContext } from '@/utils/useThemeContext'
 
 import type { AppContext, AppProps } from 'next/app'
 
 function MyApp({ Component, pageProps }: AppProps) {
   const { global } = pageProps;
-
+  const { theme } = useThemeContext()
+  const themeMode = theme === 'light' ? themeLight : themeDark
   return (
     <>
       <Head>
@@ -22,7 +28,11 @@ function MyApp({ Component, pageProps }: AppProps) {
         />
       </Head>
       <GlobalContext.Provider value={global.attributes}>
-        <Component {...pageProps} />
+        <GlobalStyles />
+        <ThemeProvider theme={themeMode}>
+          <Component {...pageProps} />
+        </ThemeProvider>
+        {/* <Component {...pageProps} /> */}
       </GlobalContext.Provider>
     </>
   );

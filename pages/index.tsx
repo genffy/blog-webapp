@@ -1,6 +1,6 @@
 import React, { useContext, useEffect, useState } from "react";
-import Seo from "@/components/seo";
-import Menu from "@/components/menu";
+import Seo from "@/components/layout/seo";
+import Menu from "@/components/layout/menu";
 import NFTAvatar from '@/components/NFTAvatar'
 import { fetchAPI } from "@/utils/api";
 import utilStyles from '@/styles/utils.module.css'

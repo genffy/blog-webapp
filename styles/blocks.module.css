@@ -4,35 +4,38 @@
     -webkit-box-shadow: 0 10px 30px 0 rgb(20 3 67 / 8%);
     box-shadow: 0 10px 30px 0 rgb(20 3 67 / 8%);
     border-radius: 6px;
-    padding: 28px 40px 22px!important;
+    padding: 40px 40px 22px!important;
     position: relative;
     overflow: hidden;
     border-left: 6px solid #5e2ced;
     z-index: 0;
-    margin: 40px 0 45px;
+    margin: 1.25rem 0 1.25rem;
     overflow-wrap: break-word;
 }
 
 .blockquote:before {
-    content: "\e6b2";
-    font-size: 30px;
+    content: "”";
+    font-size: 100px;
+    position: absolute;
+    top: 0;
+    height: 50px;
+    line-height: 1;
     color: #5e2ced;
-    padding-bottom: 12px;
     display: inline-block;
     font-family: 'iconfont';
     font-weight: 900;
-    -webkit-transform: rotate(180deg);
-    -ms-transform: rotate(180deg);
     transform: rotate(180deg);
 }
 .blockquote:after{
-    content: "\e6b2";
+    content: "”";
     font-family: 'iconfont';
     font-weight: 900;
     position: absolute;
     right: 30px;
-    bottom: auto;
-    top: 50%;
+    height: 50px;
+    line-height: 1;
+    bottom: 0;
+    /* top: 50%; */
     color: #f2effd;
     font-size: 100px;
     z-index: -1;

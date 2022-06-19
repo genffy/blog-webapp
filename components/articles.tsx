@@ -1,4 +1,3 @@
-import React from "react";
 import Card from "./card";
 
 const Articles = ({ articles }: any) => {

@@ -15,8 +15,8 @@ export const Thumb = ({ selected, onClick, thumbnail }: any) => (
             <div className={sliderStyles.embla__slide__thumbnail}>
                 <NextImage
                     layout="fill"
-                    width={thumbnail.width}
-                    height={thumbnail.height}
+                    // width={thumbnail.width}
+                    // height={thumbnail.height}
                     objectFit="contain"
                     src={thumbnail.url}
                     alt={thumbnail.alternativeText || ""}
@@ -65,8 +65,8 @@ const EmblaCarousel = ({ slides }: any) => {
                                     <div className={sliderStyles.embla__slide__img}>
                                         <NextImage
                                             layout="fill"
-                                            width={item.width}
-                                            height={item.height}
+                                            // width={item.width}
+                                            // height={item.height}
                                             objectFit="contain"
                                             src={item.url}
                                             alt={item.alternativeText || ""}

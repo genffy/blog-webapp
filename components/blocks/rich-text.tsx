@@ -15,6 +15,7 @@ import markdown from 'react-syntax-highlighter/dist/cjs/languages/prism/markdown
 import json from 'react-syntax-highlighter/dist/cjs/languages/prism/json'
 import rangeParser from 'parse-numeric-range'
 import { duotoneDark } from 'react-syntax-highlighter/dist/cjs/styles/prism'
+
 SyntaxHighlighter.registerLanguage('tsx', tsx)
 SyntaxHighlighter.registerLanguage('java', java)
 SyntaxHighlighter.registerLanguage('typescript', typescript)
@@ -31,18 +32,6 @@ interface PreNode {
     tagName: string
     type: string
 }
-const CodeBlock = ({ children }: any) => {
-    return (
-        <div className="flex overflow-hidden relative flex-col p-5 mx-auto my-5 space-y-5 w-full font-mono text-sm rounded-lg bg-navy-dark">
-            <div className="flex space-x-3 w-full">
-                <span className="w-3 h-3 rounded-full bg-mac-cls" />
-                <span className="w-3 h-3 rounded-full bg-mac-min" />
-                <span className="w-3 h-3 rounded-full bg-mac-max" />
-            </div>
-            <div className="">{children}</div>
-        </div>
-    );
-};
 
 const RichText = ({ data }: any) => {
     const syntaxTheme = duotoneDark
@@ -60,6 +49,7 @@ const RichText = ({ data }: any) => {
         },
         '.copyCode': {
             position: 'relative',
+            marginTop: '0!important',
             button: {
                 backgroundColor: 'var(--code-highlight)',
                 display: 'none',
@@ -99,15 +89,15 @@ const RichText = ({ data }: any) => {
             }
         },
         pre: {
-            margin: '0 -1.5rem 2.5rem -1.5rem',
+            margin: '0 -1.5rem 0 -1.5rem',
             fontSize: 15,
         },
         '.codeStyle': {
-            padding: '1.5rem 0 1.5rem 1.5rem !important',
+            padding: '1.5rem 0 0 1.5rem !important',
             overflow: 'scroll',
-            borderRadius: 5,
             background: 'transparent !important',
             backgroundColor: 'var(--code-bg) !important',
+            margin: '0!important',
             code: {
                 paddingRight: '1.5rem',
                 backgroundColor: 'transparent !important',
@@ -269,9 +259,16 @@ const RichText = ({ data }: any) => {
                 }, 5000)
             }
             return (
-                <div className={codeCopied ? 'copyCode active' : 'copyCode'}>
-                    <button onClick={() => handleCopyCode(codeChunk)} aria-label="Copy code to clipboard" />
-                    <pre {...pre}></pre>
+                <div className="flex overflow-hidden relative flex-col p-6 mx-auto my-5 space-y-5 w-full font-mono text-sm rounded-lg bg-navy-dark">
+                    <div className="flex space-x-3 w-full">
+                        <span className="w-3 h-3 rounded-full bg-mac-cls" />
+                        <span className="w-3 h-3 rounded-full bg-mac-min" />
+                        <span className="w-3 h-3 rounded-full bg-mac-max" />
+                    </div>
+                    <div className={codeCopied ? 'copyCode active' : 'copyCode'}>
+                        <button onClick={() => handleCopyCode(codeChunk)} aria-label="Copy code to clipboard" />
+                        <pre {...pre}></pre>
+                    </div>
                 </div>
             )
         }

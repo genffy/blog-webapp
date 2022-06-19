@@ -1,5 +1,3 @@
-import React from "react";
-
 const ShadowView = ({ children }: any) => {
     const attachShadow = (host: HTMLDivElement) => {
         if (!host || !host.shadowRoot) {

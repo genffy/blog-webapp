@@ -1,4 +1,3 @@
-import React from "react";
 import Media from "./media";
 import Quote from "./quote";
 import Slider from "./slider";

@@ -1,7 +1,5 @@
 import Moment from "react-moment";
 import NextImage from "next/image";
-
-import Seo from "@/components/seo";
 import Layout from "@/components/layout";
 import Blocks from "@/components/blocks";
 import RichText from "@/components/blocks/rich-text";
@@ -10,16 +8,16 @@ import { getStrapiMedia } from "@/utils/media";
 
 const Article = ({ article, categories }: any) => {
   const imageUrl = getStrapiMedia(article.attributes.cover);
-  console.log('article', article)
+
   const seo = {
     metaTitle: article.attributes.title,
     metaDescription: article.attributes.description,
     shareImage: article.attributes.cover,
     article: true,
   };
+
   return (
-    <Layout categories={categories.data}>
-      <Seo seo={seo} />
+    <Layout categories={categories.data} seo={seo} >
       <div
         id="banner"
         className="uk-height-medium uk-flex uk-flex-center uk-flex-middle uk-background-cover uk-light uk-padding uk-margin"
