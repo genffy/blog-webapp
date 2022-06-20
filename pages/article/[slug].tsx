@@ -1,4 +1,4 @@
-import Moment from "react-moment";
+import Dayjs from "dayjs";
 import NextImage from "next/image";
 import Layout from "@/components/layout";
 import Blocks from "@/components/blocks";
@@ -15,7 +15,7 @@ const Article = ({ article, categories }: any) => {
     shareImage: article.attributes.cover,
     article: true,
   };
-
+  const publishedAt = Dayjs(article.attributes.publishedAt).format('MM-DD-YYYY');
   return (
     <Layout categories={categories.data} seo={seo} >
       <div
@@ -55,11 +55,7 @@ const Article = ({ article, categories }: any) => {
               <p className="uk-margin-remove-bottom">
                 By {article.attributes.author.data.attributes.name}
               </p>
-              <p className="uk-text-meta uk-margin-remove-top">
-                <Moment format="MMM Do YYYY">
-                  {article.attributes.publishedAt}
-                </Moment>
-              </p>
+              <p className="uk-text-meta uk-margin-remove-top">{publishedAt}</p>
             </div>
           </div>
         </div>
