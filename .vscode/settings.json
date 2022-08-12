@@ -1,0 +1,21 @@
+{
+  "stylelint.validate": [
+    "css",
+    "less",
+    "scss",
+    "postcss",
+    "vue",
+  ],
+  "eslint.validate": [
+    "javascript",
+    "typescript"
+  ],
+  "eslint.workingDirectories": [
+    {
+      "mode": "auto"
+    }
+  ],
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  },
+}

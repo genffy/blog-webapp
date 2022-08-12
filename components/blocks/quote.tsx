@@ -1,11 +1,15 @@
 import blocksStyles from '@/styles/blocks.module.css';
 
 const Quote = ({ data }: any) => {
-  return <div>
-    <blockquote className={blocksStyles.blockquote}>
+  if(typeof window == 'undefined'){
+    return null
+  }
+  
+  return <blockquote className={blocksStyles.blockquote}>
+      <span className={blocksStyles.blockquote_first} data-uk-icon="icon: quote-right;ratio: 2;"></span>
       <p><em>{data.body}</em></p>
-    </blockquote>
-  </div>;
+      <span className={blocksStyles.blockquote_last} data-uk-icon="icon: quote-right;ratio: 2;"></span>
+    </blockquote>;
 };
 
 export default Quote;

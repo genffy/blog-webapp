@@ -2,6 +2,7 @@ import React, { useContext, useEffect, useState } from "react";
 import Seo from "@/components/layout/seo";
 import Menu from "@/components/layout/menu";
 import NFTAvatar from '@/components/NFTAvatar'
+import GraphCalendar from '@/components/calendar-graph'
 import { fetchAPI } from "@/utils/api";
 import utilStyles from '@/styles/utils.module.css'
 import { GlobalContext } from "@/pages/_app";
@@ -37,6 +38,7 @@ const Home = ({ homepage,  }: any) => {
                 </div>
               )
             }
+            <GraphCalendar />
           </div>
         </div>
       </div>
