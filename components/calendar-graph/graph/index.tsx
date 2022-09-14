@@ -1,5 +1,5 @@
 import {
-  diffDays, formatDate, noop, today, oneYearAgo, rectColor, type CItemType
+  diffDays, formatDate, noop, today, oneYearAgo, rectColor
 } from '../utils';
 import Days from './Days';
 import Months from './Months';
@@ -19,9 +19,9 @@ export default function Graph({
   styleOptions = {},
   onHover = noop
 }) {
-  const values: CItemType[] = [];
+  const values: any = [];
   const days = diffDays(startDate, endDate);
-  const dataTmp: Record<string, number> = (data as CItemType[]).reduce((memo, v) => {
+  const dataTmp: Record<string, number> = (data).reduce((memo, v) => {
     //@ts-ignore
     memo[v.date] = v.count;
     return memo;

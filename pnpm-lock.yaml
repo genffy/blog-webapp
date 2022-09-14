@@ -12,7 +12,6 @@ specifiers:
   '@types/react-syntax-highlighter': ^15.5.2
   autoprefixer: ^10.4.7
   axios: ^0.27.2
-  calendar-graph: ^1.0.1
   cross-env: ^7.0.3
   dayjs: ^1.11.2
   embla-carousel-react: ^6.2.0
@@ -32,11 +31,11 @@ specifiers:
   tailwindcss: ^3.0.24
   typescript: 4.6.4
   web3: ^1.7.4
+  web3-utils: ^1.7.5
 
 dependencies:
   '@emotion/react': 11.9.3_fnjop2jmqc3hkad2hqt46k7kgi
   axios: 0.27.2
-  calendar-graph: 1.0.1
   dayjs: 1.11.3
   embla-carousel-react: 6.2.0_react@18.1.0
   ethers: 5.6.9
@@ -50,6 +49,7 @@ dependencies:
   react-syntax-highlighter: 15.5.0_react@18.1.0
   rehype-raw: 6.1.1
   web3: 1.7.5
+  web3-utils: 1.7.5
 
 devDependencies:
   '@babel/core': 7.18.5
@@ -1528,10 +1528,6 @@ packages:
       responselike: 2.0.1
     dev: false
 
-  /calendar-graph/1.0.1:
-    resolution: {integrity: sha512-pT421YiZCKyyXYlO7EujdiTmyX/sM3l+RCPUChRxLsjG5TlI+jBHby7kHrfgHv7RtI8RPl1XPthNFGw96qgazg==}
-    dev: false
-
   /call-bind/1.0.2:
     resolution: {integrity: sha512-7O+FbCihrB5WGbFYesctwmTKae6rOiIzmz1icreWJ+0aA7LJfuqhEso2T9ncpcFtzMQtzXf2QGGueWJGTYsqrA==}
     dependencies:
@@ -2496,7 +2492,7 @@ packages:
       keccak: 3.0.2
       pbkdf2: 3.1.2
       randombytes: 2.1.0
-      safe-buffer: 5.1.2
+      safe-buffer: 5.2.1
       scrypt-js: 3.0.1
       secp256k1: 4.0.3
       setimmediate: 1.0.5
@@ -2956,7 +2952,7 @@ packages:
       lowercase-keys: 1.0.1
       p-cancelable: 0.3.0
       p-timeout: 1.2.1
-      safe-buffer: 5.1.2
+      safe-buffer: 5.2.1
       timed-out: 4.0.1
       url-parse-lax: 1.0.0
       url-to-options: 1.0.1
@@ -4597,7 +4593,7 @@ packages:
   /randombytes/2.1.0:
     resolution: {integrity: sha512-vYl3iOX+4CKUWuxGi9Ukhie6fsqXqS9FE2Zaic4tNFD2N2QQaXOMFbuKK4QmDHC0JO6B1Zp41J0LpT0oR68amQ==}
     dependencies:
-      safe-buffer: 5.1.2
+      safe-buffer: 5.2.1
     dev: false
 
   /randomfill/1.0.4:
@@ -5463,7 +5459,7 @@ packages:
       is-arguments: 1.1.1
       is-generator-function: 1.0.10
       is-typed-array: 1.1.9
-      safe-buffer: 5.1.2
+      safe-buffer: 5.2.1
       which-typed-array: 1.1.8
     dev: false
 

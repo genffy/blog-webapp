@@ -11,7 +11,7 @@ function getData() {
   const endDate = today();
   const startDate = oneYearAgo();
   const days = diffDays(startDate, endDate);
-  const data: CItemType[] = [];
+  const data: any = [];
   for (let i = 0; i <= days; i++) {
     const d = new Date(startDate);
     d.setDate(d.getDate() + i);
@@ -26,8 +26,7 @@ const Card = ({ article }: any) => {
   const tooltipRef = useRef<HTMLDivElement>(null);
   const data = getData();
   const options = {
-    onClick: (v: Event) => {
-      console.log(v);
+    onClick: () => {
     }
   };
   useEffect(() => {
@@ -41,7 +40,7 @@ const Card = ({ article }: any) => {
     if(!tip){
       return 
     }
-    let elems = document.getElementsByClassName('cg-day');
+    let elems = document.getElementsByClassName('cg-day') as HTMLCollectionOf<HTMLElement>;
     const mouseOver = function(e: MouseEvent) {
       const elem = e.target as HTMLElement;
       if(!elem){
@@ -68,7 +67,7 @@ const Card = ({ article }: any) => {
   return (
     <div className={utilStyles.graphContainer}>
         <div className="graph-main">
-          <Graph data={data} options={options}></Graph>
+          <Graph data={data} onClick={options.onClick}></Graph>
           <div ref={tooltipRef} id="tooltip">Hello world</div>
         </div>
     </div>
