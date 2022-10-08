@@ -1,46 +1,19 @@
+import { GlobalContext } from "@/pages/_app";
 import Link from "next/link";
+import { useContext } from "react";
 
 const Menus = () => {
-    const MENUS = [
-        {
-            id: 1,
-            path: '/article',
-            name: '文章',
-        },
-        {
-            id: 2,
-            path: '/category',
-            name: '标签',
-        },
-        {
-            id: 3,
-            path: '/about',
-            name: '关于',
-        }
-    ]
+    const { menus }: any = useContext(GlobalContext);
+    if (!menus) {
+        return null
+    }
     return <>
-        <style jsx>{`
-        .uk-navbar-nav {
-            justify-content: center;
-        }
-        .uk-navbar-nav>li {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-        .uk-navbar-nav>:nth-child(n+2):not(.uk-first-column)::before {
-            content: "/";
-            margin: 0 10px 0 calc(10px - 4px);
-            font-size: 14px;
-            color: #999;
-        }
-        `}</style>
-        <ul className="uk-navbar-nav">
-            {MENUS.map((category: any) => {
+        <ul className="uk-breadcrumb">
+            {menus.map((category: any) => {
                 return (
-                    <li key={category.id}>
-                        <Link href={`${category.path}`}>
-                            <a className="uk-link-reset">{category.name}</a>
+                    <li key={category.link}>
+                        <Link href={`${category.link}`}>
+                            <a className="uk-link-reset">{category.title}</a>
                         </Link>
                     </li>
                 );
