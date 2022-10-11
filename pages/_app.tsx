@@ -16,7 +16,7 @@ import { useThemeContext } from '@/utils/useThemeContext'
 import type { AppContext, AppProps } from 'next/app'
 
 function MyApp({ Component, pageProps }: AppProps) {
-  const { global } = pageProps;
+  const { global } = pageProps as any;
   const { theme } = useThemeContext()
   const themeMode = theme === 'light' ? themeLight : themeDark
   return (
