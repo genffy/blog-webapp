@@ -30,9 +30,8 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
         with:
-          persis-credentials: false
+          persist-credentials: false
           ref: master
-          submodules: false
 
       - name: Install and Build
         uses: actions/setup-node@v1
@@ -40,14 +39,14 @@ jobs:
           node-version: v16.15.0
       - run: |
           npm install
-          npm run build
+          npm run deploy
 
       - name: Deploy to aliyun server
-        uses: easingthemes/ssh-deploy@v2.0.7
+        uses: easingthemes/ssh-deploy@v2.1.5
         env:
           SSH_PRIVATE_KEY: ${{ secrets.ALIYUN_SERVER_ACCESS_TOKEN }}
-          ARGS: "-avzr --delete"
+          ARGS: "-rltgoDzvO --exclude .git --exclude .github"
           SOURCE: "out/"
           REMOTE_HOST: ${{ secrets.ALIYUN_SERVER_HOST }}
           REMOTE_USER: "root"
-          TARGET: "/opt/apps/blog-webapp-out"
+          TARGET: "/opt/apps/blog-webapp-out/"
