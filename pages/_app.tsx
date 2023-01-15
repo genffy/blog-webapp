@@ -1,6 +1,7 @@
 
 import App from "next/app";
 import Head from "next/head";
+import Link from "next/link";
 
 import '@/styles/globals.css';
 import '@/styles/nord.css';
@@ -34,7 +35,9 @@ function MyApp({ Component, pageProps }: AppProps) {
         <ThemeProvider theme={themeMode}>
           <Component {...pageProps} />
         </ThemeProvider>
-        {/* <Component {...pageProps} /> */}
+        {
+          global.attributes.beian && <footer style={{ textAlign: 'center' }}><a style={{ fontSize: '12px', color: 'inherit' }} href="https://beian.miit.gov.cn/" target="_blank" rel="noreferrer">{global.attributes.beian}</a></footer>
+        }
       </GlobalContext.Provider>
     </>
   );
@@ -58,6 +61,9 @@ MyApp.getInitialProps = async (ctx: AppContext) => {
         populate: "*",
       },
       avatar: '*',
+      beian: '*',
+      socialLinks: '*',
+      menus: '*',
     },
   });
   // Pass the data to our page via props

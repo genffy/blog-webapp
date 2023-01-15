@@ -6,6 +6,7 @@ import { fetchAPI } from "@/utils/api";
 import utilStyles from '@/styles/utils.module.css'
 import { GlobalContext } from "@/pages/_app";
 import { getStrapiMedia } from "@/utils/media";
+import SocialLinks from "@/components/social-links";
 
 const Home = ({ homepage, }: any) => {
   const attributes = homepage.attributes
@@ -37,6 +38,8 @@ const Home = ({ homepage, }: any) => {
                 </div>
               )
             }
+            <hr className="uk-divider-small"></hr>
+            <SocialLinks />
           </div>
         </div>
       </div>

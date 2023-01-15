@@ -45,7 +45,6 @@ class MyDocument extends Document {
           /> */}
           <Main />
           <NextScript />
-          <footer style={{textAlign: 'center'}}><a style={{fontSize: '12px'}} href="https://beian.miit.gov.cn/" target="_blank" rel="noreferrer">皖ICP备15009720号-1</a></footer>
         </body>
       </Html>
     );
