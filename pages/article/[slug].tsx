@@ -18,7 +18,7 @@ const Article = ({ article, categories }: any) => {
   const publishedAt = Dayjs(article.attributes.publishedAt).format('MM-DD-YYYY');
   return (
     <Layout categories={categories.data} seo={seo} >
-      <div
+      {imageUrl && <div
         id="banner"
         className="uk-height-medium uk-flex uk-flex-center uk-flex-middle uk-background-cover uk-light uk-padding uk-margin"
         data-src={imageUrl}
@@ -26,7 +26,8 @@ const Article = ({ article, categories }: any) => {
         data-uk-img
       >
         <h1 className="title-with-bg">{article.attributes.title}</h1>
-      </div>
+      </div>}
+
       <div className="uk-section">
         <div className="uk-container uk-container-small">
           <RichText data={article.attributes.content}></RichText>

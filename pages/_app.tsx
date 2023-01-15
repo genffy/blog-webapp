@@ -22,10 +22,12 @@ function MyApp({ Component, pageProps }: AppProps) {
   return (
     <>
       <Head>
-        <link
-          rel="shortcut icon"
-          href={getStrapiMedia(global.attributes.favicon)}
-        />
+        {
+          global.attributes.favicon && <link
+            rel="shortcut icon"
+            href={getStrapiMedia(global.attributes.favicon)}
+          />
+        }
       </Head>
       <GlobalContext.Provider value={global.attributes}>
         <GlobalStyles />

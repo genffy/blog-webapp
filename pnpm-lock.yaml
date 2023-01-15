@@ -11,6 +11,7 @@ specifiers:
   '@types/react-syntax-highlighter': ^15.5.2
   autoprefixer: ^10.4.7
   axios: ^0.27.2
+  bcryptjs: ^2.4.3
   cross-env: ^7.0.3
   dayjs: ^1.11.2
   embla-carousel-react: ^6.2.0
@@ -55,6 +56,7 @@ devDependencies:
   '@types/react-dom': 18.0.3
   '@types/react-syntax-highlighter': 15.5.2
   autoprefixer: 10.4.7_postcss@8.4.14
+  bcryptjs: 2.4.3
   cross-env: 7.0.3
   eslint: 8.14.0
   eslint-config-next: 12.3.1_t725usgvqspm5woeqpaxbfp2qu
@@ -1223,6 +1225,10 @@ packages:
 
   /balanced-match/1.0.2:
     resolution: {integrity: sha512-3oSeUO0TMV67hN1AmbXsK4yaqU7tjiHlbxRDZOpH0KW9+CeX4bRAaX0Anxt0tx2MrpRpWwQaPwIlISEJhYU5Pw==}
+    dev: true
+
+  /bcryptjs/2.4.3:
+    resolution: {integrity: sha512-V/Hy/X9Vt7f3BbPJEi8BdVFMByHi+jNXrYkW3huaybV/kQ0KJg0Y6PkEMbn+zeT+i+SiKZ/HMqJGIIt4LZDqNQ==}
     dev: true
 
   /bech32/1.1.4:
