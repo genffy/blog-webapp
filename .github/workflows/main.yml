@@ -50,10 +50,11 @@ jobs:
           IP: ${{ secrets.ALIYUN_SERVER_HOST }}
  
       - name: Deploy to aliyun server
-        uses: easingthemes/ssh-deploy@v2.1.5
+        uses: easingthemes/ssh-deploy@v2.2.11
+
         env:
           SSH_PRIVATE_KEY: ${{ secrets.ALIYUN_SERVER_ACCESS_TOKEN }}
-          ARGS: "-rltgoDzvO --exclude .git --exclude .github"
+          ARGS: "-rltgoDzvO --delete --chown=root:root"
           SOURCE: "out/"
           REMOTE_HOST: ${{ secrets.ALIYUN_SERVER_HOST }}
           REMOTE_USER: "root"
