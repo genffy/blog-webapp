@@ -12,31 +12,23 @@
     margin: 1.25rem 0 1.25rem;
     overflow-wrap: break-word;
 }
-
-.blockquote:before {
-    content: "”";
-    font-size: 100px;
+.blockquote .uk-icon {
+    color: #5e2ced;
+}
+.blockquote_first {
+    transform: rotate(180deg);
+    color: #5e2ced;
     position: absolute;
     top: 0;
-    height: 50px;
-    line-height: 1;
-    color: #5e2ced;
-    display: inline-block;
-    font-family: 'iconfont';
-    font-weight: 900;
-    transform: rotate(180deg);
 }
-.blockquote:after{
-    content: "”";
-    font-family: 'iconfont';
-    font-weight: 900;
+.blockquote_last {
+    color: #f2effd;
     position: absolute;
     right: 30px;
-    height: 50px;
-    line-height: 1;
     bottom: 0;
-    /* top: 50%; */
-    color: #f2effd;
-    font-size: 100px;
-    z-index: -1;
+}
+
+
+.reward {
+    
 }
